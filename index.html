@@ -1,0 +1,207 @@
+<div class="sidebar sticky">
+  <div itemscope="" itemtype="http://schema.org/Person">
+    <div class="author-profile-header">
+      <div class="author__avatar">
+        <!-- 头像图片 -->
+        <img src="photo/5.jpg" class="author__avatar profile-avatar" alt="Han Jiao">
+      </div>
+      <div class="author__content author__content--compact">
+        <h3 class="author__name">Han Jiao (焦涵)</h3>
+        <p class="author__bio">Master's Student, Zhejiang University</p>
+        <div class="author__urls-wrapper">
+          <ul class="author__urls social-icons">
+            <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>Hangzhou, Zhejiang, China</li>
+            <li><a href="mailto:csjh@zju.edu.cn"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
+            <li><a href="https://scholar.google.cz/citations?hl=zh-CN&user=E52_2goAAAAJ"><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
+            <li><a href="https://github.com/LabubuJ"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<article class="page" itemscope="" itemtype="http://schema.org/CreativeWork">
+  <meta itemprop="headline" content="Han Jiao">
+  <meta itemprop="description" content="Han Jiao Academic Homepage">
+  <div class="page__inner-wrap">
+    <header>
+      <h1 class="page__title" itemprop="headline">Han Jiao (焦涵)</h1>
+    </header>
+    
+    <section class="page__content" itemprop="text">
+      <!-- 核心 CSS 样式表 (保留了原作者优秀的排版设计) -->
+      <style> 
+        .top-hero { display: block; margin-bottom: 1.1rem; } 
+        .home-intro { font-size: 1rem; line-height: 1.72; color: #313846; } 
+        .home-intro a, .meta-grid a { color: #2e6a43; text-decoration: none; } 
+        .home-intro a:hover, .meta-grid a:hover { color: #1f5132; text-decoration: underline; } 
+        .author-profile-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 0.9rem; }
+        .author__content--compact { padding-top: 0.2rem; }
+        .author__content--compact .author__name { margin-bottom: 0.25rem; }
+        .author__content--compact .author__bio { margin-top: 0; line-height: 1.5; }
+        .author__urls-wrapper { margin-top: 0.5rem; }
+        .author__urls { list-style: none; padding-left: 0; margin: 0; }
+        .author__urls li { margin: 0.22rem 0; }
+        .profile-avatar { width: 190px; height: 220px; object-fit: cover; object-position: center 20%; border-radius: 18px; display: block; margin: 0; background: #f7f9fb; box-shadow: 0 6px 18px rgba(20, 35, 50, 0.12); }
+        .meta-grid { margin: 0.85rem 0 1.6rem; font-size: 0.97rem; } 
+        .meta-grid > div { margin: 0.24rem 0; } 
+        .pub-note { color: #566172; } 
+        .pub-item { position: relative; display: grid; grid-template-columns: minmax(250px, 34%) 1fr; gap: 18px; align-items: stretch; padding: 14px 14px 12px; border: 1px solid #e5ecf1; border-radius: 12px; background: #ffffff; box-shadow: 0 3px 12px rgba(20, 35, 50, 0.05); margin-bottom: 1.5rem; } 
+        .pub-item--first { background: #ffffff; border-color: #e5ecf1; } 
+        .venue-badge { position: absolute; top: -10px; left: 12px; padding: 0.15rem 0.55rem; border-radius: 999px; background: #f2f5f8; border: 1px solid #d9e1e8; color: #6b7785; font-size: 0.66rem; font-weight: 600; } 
+        .pub-cover { min-height: 220px; height: 100%; }
+        .pub-cover img { width: 100%; height: 100%; min-height: 220px; object-fit: cover; object-position: center center; border-radius: 10px; display: block; } 
+        .pub-title { color: #323842; font-size: 1.1rem; margin-top: 0.5rem;} 
+        .pub-venue { color: #1f5d3a; font-weight: bold;} 
+        .pub-authors { color: #4a525c; } .pub-authors b { color: #323842; } 
+        .pub-item a { color: #2e6a43; text-decoration: none; } 
+        .pub-item a:hover { color: #1f5132; text-decoration: underline; } 
+        .first-badge { display: inline-block; margin-left: 0.45rem; padding: 0.08rem 0.48rem; border-radius: 999px; border: 1px solid #d9e1e8; background: #f4f6f8; color: #5f6b77; font-size: 0.72rem; font-weight: 600; vertical-align: middle; } 
+        .pub-link-disabled { color: #9aa3ad; cursor: default; }
+        .news-box { padding: 10px 14px; border: 1px solid #e5ecf1; border-radius: 8px; background-color: #fcfcfc; }
+        .news-list { margin: 0; padding-left: 20px; font-size: 0.95rem; }
+        .news-list li { margin-bottom: 8px; }
+        .news-list li:last-child { margin-bottom: 0; }
+        .exp-item { display: grid; grid-template-columns: 132px 1fr; gap: 18px; padding: 16px 0; border-bottom: 1px dashed #e5ecf1; align-items: start; }
+        .exp-logo-panel { display: flex; align-items: flex-start; justify-content: center; }
+        .exp-company-logo { width: 112px; height: 112px; object-fit: contain; border-radius: 18px; background: #ffffff; padding: 12px; border: 1px solid #e6edf2; box-shadow: 0 4px 14px rgba(20, 35, 50, 0.06); }
+        .exp-header { margin-bottom: 0.35rem; }
+        .exp-header h3 { margin: 0; color: #1f5d3a; }
+        .exp-role { margin: 5px 0 10px 0; font-weight: bold; color:#4a525c; }
+        @media (max-width: 860px) { .author-profile-header { flex-direction: column; align-items: center; text-align: center; } .author__urls { text-align: left; } .profile-avatar { width: 160px; height: 185px; } .pub-item { grid-template-columns: 1fr; } .pub-cover, .pub-cover img { min-height: 200px; } .exp-item { grid-template-columns: 1fr; gap: 12px; } .exp-logo-panel { justify-content: flex-start; } .exp-company-logo { width: 96px; height: 96px; } }
+      </style>
+
+      <!-- 简介模块 -->
+      <div class="top-hero">
+        <div>
+          <div class="home-intro"> 
+            I am currently a second-year Master's student at the School of Computer Science and Technology, Zhejiang University. Before that, I received my bachelor's degree from <b>the Chu Kochen Honors College, Zhejiang University</b>.
+            <br><br>
+            My main research interests are <b>Computer Vision</b> and <b>Neural Rendering</b>, with a particular focus on Dynamic Scene Reconstruction, World Models and Physical Simulation.
+          </div>
+        </div>
+      </div>
+
+      <!-- 最新动态模块 -->
+      <h2 id="news">News</h2>
+      <div class="news-box">
+        <ul class="news-list">
+          <li><b>[2026.03]</b> First-author paper <i>Fast and Robust Deformable 3D Gaussian Splatting</i> is accepted by <b>TVCG</b>.</li>
+          <li><b>[2026.02]</b> First-author paper <i>MAPo</i> is accepted to <b>CVPR 2026</b>.</li>
+          <li><b>[2025.11]</b> Joined <b>Li Auto</b> as a World Model Algorithm Intern.</li>
+          <li><b>[2025.06]</b> Joined <b>Alibaba</b> as a Vision AI Algorithm Intern.</li>
+          <li><b>[2024.07]</b> Joined <b>Tencent</b> LightSpeed Studios as an Algorithm Intern.</li>
+          <li><b>[2024.02]</b> Our work <i>3DGStream</i> is accepted as a <b>CVPR 2024 Highlight</b>.</li>
+        </ul>
+      </div>
+
+      <!-- 科研成果模块 -->
+      <h2 id="publications">Publications</h2>
+      <div class="pub-note">Gray links indicate materials that will be updated soon.</div>
+
+      <!-- 论文 1: MAPo -->
+      <div class="pub-item pub-item--first"> 
+        <span class="venue-badge">CVPR 2026</span>
+        <div class="pub-cover">
+          <img src="paper_image/MAPo.gif" alt="MAPo" style="border: 1px solid #eee;">
+        </div>
+        <div>
+          <h3 class="pub-title">MAPo: Motion-Aware Partitioning of Deformable 3D Gaussian Splatting for High-Fidelity Dynamic Scene Reconstruction <span class="first-badge">First Author</span></h3>
+          <p class="pub-authors"><b>Han Jiao</b>, Jiakai Sun, Yexing Xu, Lei Zhao, Wei Xing, Huaizhong Lin</p>
+          <p class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2508.19786">[PDF]</a> | <a href="https://labubuj.github.io/MAPo/">[Project Page]</a> | <span class="pub-link-disabled">[Code]</span>
+          </p>
+          <p style="font-size: 0.9rem; color: #555;">Proposes a motion-aware partitioning framework based on dynamic scores to recursively divide and specialize high-dynamic 3D Gaussians over time, achieving SOTA rendering quality on N3DV with high computational efficiency.</p>
+        </div>
+      </div>
+
+      <!-- 论文 2: 3DGStream -->
+      <div class="pub-item"> 
+        <span class="venue-badge">CVPR 2024 Highlight</span>
+        <div class="pub-cover">
+          <img src="paper_image/3DGStream.png" alt="3DGStream" style="border: 1px solid #eee;">
+        </div>
+        <div>
+          <h3 class="pub-title">3DGStream: On-the-Fly Training of 3D Gaussians for Efficient Streaming of Photo-Realistic Free-Viewpoint Videos</h3>
+          <p class="pub-authors">Jiakai Sun, <b>Han Jiao</b>, Guangyuan Li, Zhanjie Zhang, Lei Zhao, Wei Xing</p>
+          <p class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2403.01444">[PDF]</a> | <a href="https://sjojok.github.io/3dgstream">[Project Page]</a> | <a href="https://github.com/SJoJoK/3DGStream">[Code]</a>
+          </p>
+          <p style="font-size: 0.9rem; color: #555;">Achieves real-time renderable, high-fidelity free-viewpoint video streaming on real-world multi-view video streams through compact neural transformation caching and adaptive Gaussian addition strategies.</p>
+        </div>
+      </div>
+
+      <!-- 论文 3: TVCG -->
+      <div class="pub-item pub-item--first"> 
+        <span class="venue-badge">TVCG</span>
+        <div class="pub-cover">
+          <img src="paper_image/Frog.png" alt="Fast and Robust Deformable 3D Gaussian Splatting" style="border: 1px solid #eee;">
+        </div>
+        <div>
+          <h3 class="pub-title">Fast and Robust Deformable 3D Gaussian Splatting <span class="first-badge">First Author</span></h3>
+          <p class="pub-authors"><b>Han Jiao</b>, Jiakai Sun, Lei Zhao, Zhanjie Zhang, Wei Xing, Huaizhong Lin</p>
+          <p class="pub-venue">IEEE Transactions on Visualization and Computer Graphics (TVCG), 2026</p>
+          <p class="pub-links">
+            <span class="pub-link-disabled">[PDF]</span> | <span class="pub-link-disabled">[Project Page]</span> | <span class="pub-link-disabled">[Code]</span>
+          </p>
+          <p style="font-size: 0.9rem; color: #555;">Significantly accelerates rendering and training time while maintaining competitive quality by merging time embeddings via Hadamard-product, applying canonical field sampling for areas lacking initial point clouds, and using aggressive opacity reduction strategy.</p>
+        </div>
+      </div>
+
+      <!-- 实习经历模块 -->
+      <h2 id="experience">Work Experience</h2>
+      
+      <div class="exp-item">
+        <div class="exp-logo-panel">
+          <img src="inc/Lixiang.png" alt="Li Auto logo" class="exp-company-logo">
+        </div>
+        <div>
+          <div class="exp-header">
+            <h3>Li Auto (理想汽车)</h3>
+          </div>
+          <p class="exp-role">World Model Algorithm Intern | Joint Reconstruction Group</p>
+          <ul style="font-size: 0.95rem; margin-bottom: 0;">
+            <li>Worked on world-model-related 3D reconstruction and physically grounded simulation.</li>
+            <li>Explored efficient feed-forward reconstruction methods for scalable road reconstruction.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-logo-panel">
+          <img src="inc/Alibaba.png" alt="Alibaba logo" class="exp-company-logo">
+        </div>
+        <div>
+          <div class="exp-header">
+            <h3>Alibaba (阿里巴巴)</h3>
+          </div>
+          <p class="exp-role">Vision AI Algorithm Intern | Supply Intelligence Group</p>
+          <ul style="font-size: 0.95rem; margin-bottom: 0;">
+            <li>Worked on image generation and editing algorithms, with a focus on improving visual quality and robustness.</li>
+            <li>Participated in the development of training data pipelines and model adaptation for AIGC applications.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item" style="border-bottom: none;">
+        <div class="exp-logo-panel">
+          <img src="inc/Tencent.png" alt="Tencent logo" class="exp-company-logo">
+        </div>
+        <div>
+          <div class="exp-header">
+            <h3>Tencent (腾讯)</h3>
+          </div>
+          <p class="exp-role">Algorithm Intern | LightSpeed Studios</p>
+          <ul style="font-size: 0.95rem; margin-bottom: 0;">
+            <li>Worked on 3D data processing and geometry-related algorithm optimization for large-scale digital assets.</li>
+            <li>Supported efficiency improvements in content production pipelines for 3D graphics applications.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</article>
