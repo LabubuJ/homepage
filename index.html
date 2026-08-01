@@ -58,12 +58,9 @@
         .pub-item--first { background: #ffffff; border-color: var(--line); }
         .pub-item--featured { border-color: #b9d8c6; box-shadow: 0 10px 26px rgba(25, 91, 62, 0.10); }
         .venue-badge { position: absolute; top: -11px; left: 16px; padding: 0.18rem 0.62rem; border-radius: 999px; background: #f2f7f4; border: 1px solid #d6e7dc; color: #35694e; font-size: 0.67rem; font-weight: 700; letter-spacing: 0.02em; }
-        .pub-cover { min-height: 220px; height: 100%; overflow: hidden; border-radius: 11px; background: #f4f7f5; }
-        .pub-cover img, .pub-cover object { width: 100%; height: 100%; min-height: 220px; object-fit: cover; object-position: center center; border-radius: 10px; display: block; }
-        .pub-item--featured .pub-cover { align-self: start; min-height: 0; height: auto; aspect-ratio: 870 / 531; }
-        .pub-item--featured .pub-cover object { min-height: 0; object-fit: contain; background: #ffffff; }
-        .pub-item--wide-figure .pub-cover { align-self: start; min-height: 0; height: auto; aspect-ratio: 1470 / 673; }
-        .pub-item--wide-figure .pub-cover img { min-height: 0; object-fit: contain; background: #ffffff; }
+        .pub-cover { align-self: start; overflow: hidden; border-radius: 11px; background: #f4f7f5; }
+        .pub-cover img, .pub-cover object { width: 100%; height: auto; min-height: 0; border-radius: 10px; display: block; }
+        .pub-item--featured .pub-cover object { aspect-ratio: 870 / 531; background: #ffffff; }
         .pub-title { color: #28343c; font-size: 1.12rem; line-height: 1.38; margin: 0.42rem 0 0.65rem;}
         .pub-venue { color: #1f5d3a; font-weight: bold;} 
         .pub-authors { color: #4a525c; } .pub-authors b { color: #323842; } 
@@ -81,7 +78,7 @@
         .exp-header { margin-bottom: 0.35rem; }
         .exp-header h3 { margin: 0; color: #1f5d3a; }
         .exp-role { margin: 5px 0 10px 0; font-weight: bold; color:#4a525c; }
-        @media (max-width: 860px) { .sidebar.sticky, .page { width: min(100% - 36px, 680px) !important; } .sidebar.sticky { margin-top: 1.45rem !important; } .author-profile-header { flex-direction: column; align-items: center; text-align: center; } .author__urls { text-align: left; } .profile-avatar { width: 160px; height: 185px; } .top-hero { padding: 1.2rem; } .pub-item { grid-template-columns: 1fr; gap: 15px; padding: 15px; } .pub-cover, .pub-cover img, .pub-cover object { min-height: 200px; } .exp-item { grid-template-columns: 1fr; gap: 12px; padding: 15px; } .exp-logo-panel { justify-content: flex-start; } .exp-company-logo { width: 88px; height: 88px; } }
+        @media (max-width: 860px) { .sidebar.sticky, .page { width: min(100% - 36px, 680px) !important; } .sidebar.sticky { margin-top: 1.45rem !important; } .author-profile-header { flex-direction: column; align-items: center; text-align: center; } .author__urls { text-align: left; } .profile-avatar { width: 160px; height: 185px; } .top-hero { padding: 1.2rem; } .pub-item { grid-template-columns: 1fr; gap: 15px; padding: 15px; } .exp-item { grid-template-columns: 1fr; gap: 12px; padding: 15px; } .exp-logo-panel { justify-content: flex-start; } .exp-company-logo { width: 88px; height: 88px; } }
       </style>
 
       <!-- 简介模块 -->
@@ -163,7 +160,7 @@
       </div>
 
       <!-- 论文 3: TVCG -->
-      <div class="pub-item pub-item--first pub-item--wide-figure">
+      <div class="pub-item pub-item--first">
         <span class="venue-badge">TVCG</span>
         <div class="pub-cover">
           <img src="paper_image/Frog.png" alt="Fast and Robust Deformable 3D Gaussian Splatting" style="border: 1px solid #eee;">
