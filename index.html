@@ -54,16 +54,16 @@
         .meta-grid { margin: 0.85rem 0 1.6rem; font-size: 0.97rem; } 
         .meta-grid > div { margin: 0.24rem 0; } 
         .pub-note { color: #566172; } 
-        .pub-item { position: relative; display: grid; grid-template-columns: minmax(270px, 34%) 1fr; gap: 22px; align-items: stretch; padding: 19px; border: 1px solid var(--line); border-radius: 16px; background: #ffffff; box-shadow: 0 7px 20px rgba(20, 35, 50, 0.055); margin-bottom: 1.35rem; }
+        .pub-item { position: relative; display: grid; grid-template-columns: 240px 1fr; gap: 17px; align-items: start; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #ffffff; box-shadow: 0 5px 15px rgba(20, 35, 50, 0.05); margin-bottom: 1rem; }
         .pub-item--first { background: #ffffff; border-color: var(--line); }
         .pub-item--featured { border-color: #b9d8c6; box-shadow: 0 10px 26px rgba(25, 91, 62, 0.10); }
         .venue-badge { position: absolute; top: -11px; left: 16px; padding: 0.18rem 0.62rem; border-radius: 999px; background: #f2f7f4; border: 1px solid #d6e7dc; color: #35694e; font-size: 0.67rem; font-weight: 700; letter-spacing: 0.02em; }
-        .pub-cover { align-self: start; overflow: hidden; border-radius: 11px; background: #f4f7f5; }
-        .pub-cover img, .pub-cover object { width: 100%; height: auto; min-height: 0; border-radius: 10px; display: block; }
-        .pub-item--featured .pub-cover object { aspect-ratio: 870 / 531; background: #ffffff; }
-        .pub-title { color: #28343c; font-size: 1.12rem; line-height: 1.38; margin: 0.42rem 0 0.65rem;}
+        .pub-cover { width: 240px; height: 155px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 10px; background: #f4f7f5; }
+        .pub-cover img { width: 100%; height: 100%; object-fit: contain; object-position: center; border-radius: 9px; display: block; }
+        .pub-title { color: #28343c; font-size: 1.02rem; line-height: 1.32; margin: 0.22rem 0 0.38rem;}
         .pub-venue { color: #1f5d3a; font-weight: bold;} 
-        .pub-authors { color: #4a525c; } .pub-authors b { color: #323842; } 
+        .pub-item p { margin: 0.38rem 0; } .pub-item p[style] { font-size: 0.86rem !important; line-height: 1.45; }
+        .pub-authors { color: #4a525c; font-size: 0.92rem; } .pub-authors b { color: #323842; }
         .pub-item a { color: #2e6a43; text-decoration: none; } 
         .pub-item a:hover { color: #1f5132; text-decoration: underline; } 
         .first-badge { display: inline-block; margin-left: 0.45rem; padding: 0.08rem 0.48rem; border-radius: 999px; border: 1px solid #d9e1e8; background: #f4f6f8; color: #5f6b77; font-size: 0.72rem; font-weight: 600; vertical-align: middle; } 
@@ -78,7 +78,7 @@
         .exp-header { margin-bottom: 0.35rem; }
         .exp-header h3 { margin: 0; color: #1f5d3a; }
         .exp-role { margin: 5px 0 10px 0; font-weight: bold; color:#4a525c; }
-        @media (max-width: 860px) { .sidebar.sticky, .page { width: min(100% - 36px, 680px) !important; } .sidebar.sticky { margin-top: 1.45rem !important; } .author-profile-header { flex-direction: column; align-items: center; text-align: center; } .author__urls { text-align: left; } .profile-avatar { width: 160px; height: 185px; } .top-hero { padding: 1.2rem; } .pub-item { grid-template-columns: 1fr; gap: 15px; padding: 15px; } .exp-item { grid-template-columns: 1fr; gap: 12px; padding: 15px; } .exp-logo-panel { justify-content: flex-start; } .exp-company-logo { width: 88px; height: 88px; } }
+        @media (max-width: 860px) { .sidebar.sticky, .page { width: min(100% - 36px, 680px) !important; } .sidebar.sticky { margin-top: 1.45rem !important; } .author-profile-header { flex-direction: column; align-items: center; text-align: center; } .author__urls { text-align: left; } .profile-avatar { width: 160px; height: 185px; } .top-hero { padding: 1.2rem; } .pub-item { grid-template-columns: 1fr; gap: 12px; padding: 14px; } .pub-cover { width: 100%; height: 190px; } .exp-item { grid-template-columns: 1fr; gap: 12px; padding: 15px; } .exp-logo-panel { justify-content: flex-start; } .exp-company-logo { width: 88px; height: 88px; } }
       </style>
 
       <!-- 简介模块 -->
@@ -111,9 +111,7 @@
       <div class="pub-item pub-item--first pub-item--featured">
         <span class="venue-badge">arXiv 2026</span>
         <div class="pub-cover">
-          <object data="paper_image/RoadVGGT_main.pdf" type="application/pdf" aria-label="RoadVGGT overview figure">
-            <a href="paper_image/RoadVGGT_main.pdf">View the RoadVGGT overview figure (PDF)</a>
-          </object>
+          <img src="paper_image/RoadVGGT_main.png" alt="RoadVGGT overview figure" style="border: 1px solid #eee;">
         </div>
         <div>
           <h3 class="pub-title">RoadVGGT: Road-Structure-Aware Feed-Forward Road Surface Reconstruction <span class="first-badge">First Author</span></h3>
