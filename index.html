@@ -32,8 +32,11 @@
     <section class="page__content" itemprop="text">
       <!-- 核心 CSS 样式表 (保留了原作者优秀的排版设计) -->
       <style> 
-        .top-hero { display: block; margin-bottom: 1.1rem; } 
-        .home-intro { font-size: 1rem; line-height: 1.72; color: #313846; } 
+        :root { --accent: #216a4b; --accent-soft: #edf7f1; --ink: #27313b; --muted: #5f6b77; --line: #e1e9e5; }
+        .page__content { max-width: 1080px; }
+        .page__content h2 { margin: 2.25rem 0 0.85rem; padding-bottom: 0.45rem; border-bottom: 2px solid var(--accent); color: var(--ink); letter-spacing: -0.01em; }
+        .top-hero { display: block; margin: 0.4rem 0 1.7rem; padding: 1.45rem 1.55rem; border: 1px solid #dcebe3; border-radius: 16px; background: linear-gradient(135deg, #f7fbf8 0%, #edf6f1 100%); box-shadow: 0 8px 24px rgba(20, 60, 42, 0.06); }
+        .home-intro { max-width: 860px; font-size: 1.03rem; line-height: 1.78; color: #313846; }
         .home-intro a, .meta-grid a { color: #2e6a43; text-decoration: none; } 
         .home-intro a:hover, .meta-grid a:hover { color: #1f5132; text-decoration: underline; } 
         .author-profile-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 0.9rem; }
@@ -47,29 +50,30 @@
         .meta-grid { margin: 0.85rem 0 1.6rem; font-size: 0.97rem; } 
         .meta-grid > div { margin: 0.24rem 0; } 
         .pub-note { color: #566172; } 
-        .pub-item { position: relative; display: grid; grid-template-columns: minmax(250px, 34%) 1fr; gap: 18px; align-items: stretch; padding: 14px 14px 12px; border: 1px solid #e5ecf1; border-radius: 12px; background: #ffffff; box-shadow: 0 3px 12px rgba(20, 35, 50, 0.05); margin-bottom: 1.5rem; } 
-        .pub-item--first { background: #ffffff; border-color: #e5ecf1; } 
-        .venue-badge { position: absolute; top: -10px; left: 12px; padding: 0.15rem 0.55rem; border-radius: 999px; background: #f2f5f8; border: 1px solid #d9e1e8; color: #6b7785; font-size: 0.66rem; font-weight: 600; } 
-        .pub-cover { min-height: 220px; height: 100%; }
+        .pub-item { position: relative; display: grid; grid-template-columns: minmax(270px, 34%) 1fr; gap: 22px; align-items: stretch; padding: 19px; border: 1px solid var(--line); border-radius: 16px; background: #ffffff; box-shadow: 0 7px 20px rgba(20, 35, 50, 0.055); margin-bottom: 1.35rem; }
+        .pub-item--first { background: #ffffff; border-color: var(--line); }
+        .pub-item--featured { border-color: #b9d8c6; box-shadow: 0 10px 26px rgba(25, 91, 62, 0.10); }
+        .venue-badge { position: absolute; top: -11px; left: 16px; padding: 0.18rem 0.62rem; border-radius: 999px; background: #f2f7f4; border: 1px solid #d6e7dc; color: #35694e; font-size: 0.67rem; font-weight: 700; letter-spacing: 0.02em; }
+        .pub-cover { min-height: 220px; height: 100%; overflow: hidden; border-radius: 11px; background: #f4f7f5; }
         .pub-cover img, .pub-cover object { width: 100%; height: 100%; min-height: 220px; object-fit: cover; object-position: center center; border-radius: 10px; display: block; }
-        .pub-title { color: #323842; font-size: 1.1rem; margin-top: 0.5rem;} 
+        .pub-title { color: #28343c; font-size: 1.12rem; line-height: 1.38; margin: 0.42rem 0 0.65rem;}
         .pub-venue { color: #1f5d3a; font-weight: bold;} 
         .pub-authors { color: #4a525c; } .pub-authors b { color: #323842; } 
         .pub-item a { color: #2e6a43; text-decoration: none; } 
         .pub-item a:hover { color: #1f5132; text-decoration: underline; } 
         .first-badge { display: inline-block; margin-left: 0.45rem; padding: 0.08rem 0.48rem; border-radius: 999px; border: 1px solid #d9e1e8; background: #f4f6f8; color: #5f6b77; font-size: 0.72rem; font-weight: 600; vertical-align: middle; } 
         .pub-link-disabled { color: #9aa3ad; cursor: default; }
-        .news-box { padding: 10px 14px; border: 1px solid #e5ecf1; border-radius: 8px; background-color: #fcfcfc; }
+        .news-box { padding: 14px 18px; border: 1px solid var(--line); border-radius: 13px; background-color: #fbfdfc; box-shadow: 0 4px 14px rgba(20, 35, 50, 0.035); }
         .news-list { margin: 0; padding-left: 20px; font-size: 0.95rem; }
-        .news-list li { margin-bottom: 8px; }
+        .news-list li { margin-bottom: 9px; padding-left: 0.18rem; }
         .news-list li:last-child { margin-bottom: 0; }
-        .exp-item { display: grid; grid-template-columns: 132px 1fr; gap: 18px; padding: 16px 0; border-bottom: 1px dashed #e5ecf1; align-items: start; }
+        .exp-item { display: grid; grid-template-columns: 116px 1fr; gap: 20px; padding: 18px; margin-bottom: 0.95rem; border: 1px solid var(--line); border-radius: 15px; background: #fff; box-shadow: 0 5px 16px rgba(20, 35, 50, 0.04); align-items: start; }
         .exp-logo-panel { display: flex; align-items: flex-start; justify-content: center; }
-        .exp-company-logo { width: 112px; height: 112px; object-fit: contain; border-radius: 18px; background: #ffffff; padding: 12px; border: 1px solid #e6edf2; box-shadow: 0 4px 14px rgba(20, 35, 50, 0.06); }
+        .exp-company-logo { width: 96px; height: 96px; object-fit: contain; border-radius: 16px; background: #ffffff; padding: 10px; border: 1px solid #e2ebe6; box-shadow: 0 4px 14px rgba(20, 35, 50, 0.06); }
         .exp-header { margin-bottom: 0.35rem; }
         .exp-header h3 { margin: 0; color: #1f5d3a; }
         .exp-role { margin: 5px 0 10px 0; font-weight: bold; color:#4a525c; }
-        @media (max-width: 860px) { .author-profile-header { flex-direction: column; align-items: center; text-align: center; } .author__urls { text-align: left; } .profile-avatar { width: 160px; height: 185px; } .pub-item { grid-template-columns: 1fr; } .pub-cover, .pub-cover img { min-height: 200px; } .exp-item { grid-template-columns: 1fr; gap: 12px; } .exp-logo-panel { justify-content: flex-start; } .exp-company-logo { width: 96px; height: 96px; } }
+        @media (max-width: 860px) { .author-profile-header { flex-direction: column; align-items: center; text-align: center; } .author__urls { text-align: left; } .profile-avatar { width: 160px; height: 185px; } .top-hero { padding: 1.2rem; } .pub-item { grid-template-columns: 1fr; gap: 15px; padding: 15px; } .pub-cover, .pub-cover img, .pub-cover object { min-height: 200px; } .exp-item { grid-template-columns: 1fr; gap: 12px; padding: 15px; } .exp-logo-panel { justify-content: flex-start; } .exp-company-logo { width: 88px; height: 88px; } }
       </style>
 
       <!-- 简介模块 -->
@@ -99,7 +103,7 @@
       </div>
 
       <!-- 论文 1: MAPo -->
-      <div class="pub-item pub-item--first">
+      <div class="pub-item pub-item--first pub-item--featured">
         <span class="venue-badge">arXiv 2026</span>
         <div class="pub-cover">
           <object data="paper_image/RoadVGGT_main.pdf" type="application/pdf" aria-label="RoadVGGT overview figure">
