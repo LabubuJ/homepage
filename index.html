@@ -51,7 +51,7 @@
         .pub-item--first { background: #ffffff; border-color: #e5ecf1; } 
         .venue-badge { position: absolute; top: -10px; left: 12px; padding: 0.15rem 0.55rem; border-radius: 999px; background: #f2f5f8; border: 1px solid #d9e1e8; color: #6b7785; font-size: 0.66rem; font-weight: 600; } 
         .pub-cover { min-height: 220px; height: 100%; }
-        .pub-cover img { width: 100%; height: 100%; min-height: 220px; object-fit: cover; object-position: center center; border-radius: 10px; display: block; } 
+        .pub-cover img, .pub-cover object { width: 100%; height: 100%; min-height: 220px; object-fit: cover; object-position: center center; border-radius: 10px; display: block; }
         .pub-title { color: #323842; font-size: 1.1rem; margin-top: 0.5rem;} 
         .pub-venue { color: #1f5d3a; font-weight: bold;} 
         .pub-authors { color: #4a525c; } .pub-authors b { color: #323842; } 
@@ -88,11 +88,11 @@
       <div class="news-box">
         <ul class="news-list">
           <li><b>[2026.07]</b> Our paper <i>RoadVGGT</i> is available on <b>arXiv</b>.</li>
-          <li><b>[2026]</b> Joined <b>ByteDance TikTok Shop</b> as an AIGC Algorithm Intern.</li>
+          <li><b>[2026.07]</b> Joined <b>ByteDance</b> as an AIGC Algorithm Intern.</li>
           <li><b>[2026.03]</b> First-author paper <i>Frog</i> is accepted by <b>TVCG</b>.</li>
           <li><b>[2026.02]</b> First-author paper <i>MAPo</i> is accepted to <b>CVPR 2026</b>.</li>
           <li><b>[2025.11]</b> Joined <b>Li Auto</b> as a World Model Algorithm Intern.</li>
-          <li><b>[2025.06]</b> Joined <b>Alibaba</b> as a Vision AI Algorithm Intern.</li>
+          <li><b>[2025.06]</b> Joined <b>Alibaba</b> as an AIGC Algorithm Intern.</li>
           <li><b>[2024.07]</b> Joined <b>Tencent</b> LightSpeed Studios as an Algorithm Intern.</li>
           <li><b>[2024.02]</b> Our work <i>3DGStream</i> is accepted as a <b>CVPR 2024 Highlight</b>.</li>
         </ul>
@@ -102,7 +102,9 @@
       <div class="pub-item pub-item--first">
         <span class="venue-badge">arXiv 2026</span>
         <div class="pub-cover">
-          <img src="paper_image/RoadVGGT.svg" alt="RoadVGGT" style="border: 1px solid #eee;">
+          <object data="paper_image/RoadVGGT_main.pdf" type="application/pdf" aria-label="RoadVGGT overview figure">
+            <a href="paper_image/RoadVGGT_main.pdf">View the RoadVGGT overview figure (PDF)</a>
+          </object>
         </div>
         <div>
           <h3 class="pub-title">RoadVGGT: Road-Structure-Aware Feed-Forward Road Surface Reconstruction <span class="first-badge">First Author</span></h3>
@@ -170,16 +172,16 @@
       
       <div class="exp-item">
         <div class="exp-logo-panel">
-          <div class="exp-company-logo" style="display:flex; align-items:center; justify-content:center; color:#111; font-size:1.05rem; font-weight:700; line-height:1.25; text-align:center;">TikTok<br>Shop</div>
+          <img src="https://companieslogo.com/img/orig/bytedance_BIG-026ddaea.svg" alt="ByteDance logo" class="exp-company-logo">
         </div>
         <div>
           <div class="exp-header">
-            <h3>ByteDance TikTok Shop</h3>
+            <h3>ByteDance</h3>
           </div>
-          <p class="exp-role">AIGC Algorithm Intern | Image Editing Model Post-training</p>
+          <p class="exp-role">AIGC Algorithm Intern | TikTok Shop</p>
           <ul style="font-size: 0.95rem; margin-bottom: 0;">
-            <li>Work on post-training for image editing models, including data, training, and evaluation workflows for instruction following, content consistency, and visual quality.</li>
-            <li>Develop a reward model for NFT to provide learnable quality and preference signals for image-editing post-training.</li>
+            <li>Contribute to production-oriented post-training of image generation and editing models for e-commerce creative applications.</li>
+            <li>Develop reward modeling and scalable evaluation methods to align generated content with user intent, aesthetic quality, and commercial usability.</li>
           </ul>
         </div>
       </div>
