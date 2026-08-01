@@ -1,3 +1,4 @@
+<div class="site-shell">
 <div class="sidebar sticky">
   <div itemscope="" itemtype="http://schema.org/Person">
     <div class="author-profile-header">
@@ -33,24 +34,32 @@
       <!-- 核心 CSS 样式表 (保留了原作者优秀的排版设计) -->
       <style> 
         :root { --accent: #216a4b; --accent-soft: #edf7f1; --ink: #27313b; --muted: #5f6b77; --line: #e1e9e5; }
-        /* Keep the profile and content on one centered reading column. */
-        .sidebar.sticky { position: static !important; float: none !important; width: min(1080px, calc(100% - 96px)) !important; max-width: 1080px !important; margin: 2.8rem auto 1.35rem !important; padding: 0 !important; }
-        .page { float: none !important; width: min(1080px, calc(100% - 96px)) !important; max-width: 1080px !important; margin: 0 auto 3.5rem !important; padding: 0 !important; }
+        /* Centered academic layout: compact profile rail + primary content. */
+        .site-shell { display: grid; grid-template-columns: 220px minmax(0, 1fr); column-gap: 48px; width: min(1100px, calc(100% - 72px)); max-width: 1100px; margin: 0 auto; }
+        .sidebar.sticky { position: sticky !important; top: 2rem; align-self: start; float: none !important; width: 220px !important; max-width: 220px !important; margin: 2.6rem 0 0 !important; padding: 0 !important; }
+        .page { float: none !important; width: auto !important; max-width: none !important; margin: 2.6rem 0 3.5rem !important; padding: 0 !important; }
         .page__inner-wrap { margin: 0 !important; max-width: none !important; }
         .page__content { max-width: 1080px; }
         .page__content h2 { margin: 2.25rem 0 0.85rem; padding-bottom: 0.45rem; border-bottom: 2px solid var(--accent); color: var(--ink); letter-spacing: -0.01em; }
-        .top-hero { display: block; margin: 0.4rem 0 1.7rem; padding: 1.45rem 1.55rem; border: 1px solid #dcebe3; border-radius: 16px; background: linear-gradient(135deg, #f7fbf8 0%, #edf6f1 100%); box-shadow: 0 8px 24px rgba(20, 60, 42, 0.06); }
-        .home-intro { max-width: 860px; font-size: 1.03rem; line-height: 1.78; color: #313846; }
+        .page__title { margin-bottom: 0.65rem; }
+        .top-hero { display: block; max-width: 900px; margin: 0.25rem 0 1.7rem; padding: 0; }
+        .home-intro { max-width: 900px; font-size: 1rem; line-height: 1.72; color: #313846; }
+        .home-intro p { margin: 0 0 0.62rem; }
+        .home-intro p:last-child { margin-bottom: 0; }
+        .profile-details { display: grid; row-gap: 0.46rem; margin-top: 0.95rem; padding-top: 0.82rem; border-top: 1px solid var(--line); }
+        .profile-row { display: grid; grid-template-columns: 148px minmax(0, 1fr); column-gap: 18px; align-items: baseline; }
+        .profile-label { color: var(--ink); font-size: 0.84rem; font-weight: 700; letter-spacing: 0.025em; }
+        .profile-detail { color: var(--muted); }
         .home-intro a, .meta-grid a { color: #2e6a43; text-decoration: none; } 
         .home-intro a:hover, .meta-grid a:hover { color: #1f5132; text-decoration: underline; } 
-        .author-profile-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 0.9rem; }
+        .author-profile-header { display: block; margin-bottom: 0.9rem; }
         .author__content--compact { padding-top: 0.2rem; }
         .author__content--compact .author__name { margin-bottom: 0.25rem; }
         .author__content--compact .author__bio { margin-top: 0; line-height: 1.5; }
         .author__urls-wrapper { margin-top: 0.5rem; }
         .author__urls { list-style: none; padding-left: 0; margin: 0; }
         .author__urls li { margin: 0.22rem 0; }
-        .profile-avatar { width: 190px; height: 220px; object-fit: cover; object-position: center 20%; border-radius: 18px; display: block; margin: 0; background: #f7f9fb; box-shadow: 0 6px 18px rgba(20, 35, 50, 0.12); }
+        .profile-avatar { width: 190px; height: 220px; object-fit: cover; object-position: center 20%; border-radius: 12px; display: block; margin: 0 0 1rem; background: #f7f9fb; box-shadow: 0 5px 16px rgba(20, 35, 50, 0.10); }
         .meta-grid { margin: 0.85rem 0 1.6rem; font-size: 0.97rem; } 
         .meta-grid > div { margin: 0.24rem 0; } 
         .pub-note { color: #566172; } 
@@ -77,16 +86,17 @@
         .exp-header { margin-bottom: 0.35rem; }
         .exp-header h3 { margin: 0; color: #1f5d3a; }
         .exp-role { margin: 5px 0 10px 0; font-weight: bold; color:#4a525c; }
-        @media (max-width: 860px) { .sidebar.sticky, .page { width: min(100% - 36px, 680px) !important; } .sidebar.sticky { margin-top: 1.45rem !important; } .author-profile-header { flex-direction: column; align-items: center; text-align: center; } .author__urls { text-align: left; } .profile-avatar { width: 160px; height: 185px; } .top-hero { padding: 1.2rem; } .pub-item { grid-template-columns: 1fr; gap: 10px; padding: 15px 0; } .pub-cover { width: 100%; height: 185px; } .exp-item { grid-template-columns: 1fr; gap: 12px; padding: 15px; } .exp-logo-panel { justify-content: flex-start; } .exp-company-logo { width: 88px; height: 88px; } }
+        @media (max-width: 860px) { .site-shell { display: block; width: min(100% - 36px, 680px); } .sidebar.sticky, .page { position: static !important; width: 100% !important; max-width: none !important; } .sidebar.sticky { margin-top: 1.45rem !important; } .page { margin-top: 1.8rem !important; } .author-profile-header { display: flex; flex-direction: column; align-items: center; text-align: center; } .author__urls { text-align: left; } .profile-avatar { width: 160px; height: 185px; } .profile-row { grid-template-columns: 1fr; row-gap: 0.08rem; } .top-hero { padding: 0; } .pub-item { grid-template-columns: 1fr; gap: 10px; padding: 15px 0; } .pub-cover { width: 100%; height: 185px; } .exp-item { grid-template-columns: 1fr; gap: 12px; padding: 15px; } .exp-logo-panel { justify-content: flex-start; } .exp-company-logo { width: 88px; height: 88px; } }
       </style>
 
       <!-- 简介模块 -->
       <div class="top-hero">
-        <div>
-          <div class="home-intro"> 
-            I am currently a second-year Master's student at the School of Computer Science and Technology, Zhejiang University. Before that, I received my bachelor's degree from <b>the Chu Kochen Honors College, Zhejiang University</b>.
-            <br><br>
-            My main research interests are <b>Computer Vision</b>, <b>Neural Rendering</b>, and <b>AIGC</b>, with a particular focus on Dynamic Scene Reconstruction, World Models, Physical Simulation, and image editing.
+        <div class="home-intro">
+          <p>I am a second-year Master's student at the School of Computer Science and Technology, Zhejiang University, advised by <a href="https://person.zju.edu.cn/zhaolei">Prof. Lei Zhao</a>. I received my B.S. degree from the <b>Chu Kochen Honors College, Zhejiang University</b>.</p>
+          <div class="profile-details">
+            <div class="profile-row"><span class="profile-label">Research Interests</span><span class="profile-detail">Computer Vision, Neural Rendering, and AIGC; with a focus on dynamic scene reconstruction, world models, physical simulation, and image editing.</span></div>
+            <div class="profile-row"><span class="profile-label">Location</span><span class="profile-detail">Hangzhou, Zhejiang, China.</span></div>
+            <div class="profile-row"><span class="profile-label">Contact</span><a href="mailto:csjh@zju.edu.cn">csjh@zju.edu.cn</a></div>
           </div>
         </div>
       </div>
@@ -100,7 +110,7 @@
           <li><b>[2026.02]</b> First-author paper <i>MAPo</i> is accepted to <b>CVPR 2026</b>.</li>
           <li><b>[2025.11]</b> Joined <b>Li Auto</b> as a World Model Algorithm Intern.</li>
           <li><b>[2025.06]</b> Joined <b>Alibaba</b> as an AIGC Algorithm Intern.</li>
-          <li><b>[2024.07]</b> Joined <b>Tencent</b> LightSpeed Poly Lab as an Algorithm Intern.</li>
+          <li><b>[2024.07]</b> Joined <b>Tencent</b> LightSpeed Poly Lab as a Graphics Algorithm Intern.</li>
           <li><b>[2024.02]</b> Our work <i>3DGStream</i> is accepted as a <b>CVPR 2024 Highlight</b>.</li>
         </ul>
       </div>
@@ -242,3 +252,4 @@
     </section>
   </div>
 </article>
+</div>
